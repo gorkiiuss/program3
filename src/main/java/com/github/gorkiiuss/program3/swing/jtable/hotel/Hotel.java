@@ -1,5 +1,9 @@
 package com.github.gorkiiuss.program3.swing.jtable.hotel;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.print.PrinterException;
+
 public class Hotel {
     public static void main(String[] args) {
         Object[][] inquilinos = {
@@ -15,5 +19,26 @@ public class Hotel {
 
         String[] nombresDeColumna =
                 {"Nombre", "Apellidos", "Edad", "Mascota", "Número de la habitación", "¿Es pelirrojo?"};
+
+        JFrame frame = new JFrame();
+        frame.setTitle("Hotel");
+        frame.setSize(1000, 500);
+
+        JTable table = new JTable(inquilinos, nombresDeColumna);
+        frame.add(new JScrollPane(table), BorderLayout.CENTER);
+
+        JButton button = new JButton("Imprimir");
+        button.addActionListener((e) -> {
+            try {
+                table.print();
+            } catch (PrinterException ex) {
+                System.err.println("No hay ninguna impresora");
+            }
+        });
+
+        frame.add(button, BorderLayout.SOUTH);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 }
