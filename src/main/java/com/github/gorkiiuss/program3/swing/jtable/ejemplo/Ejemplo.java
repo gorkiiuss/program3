@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 
 public class Ejemplo {
     public static void main(String[] args) {
@@ -45,6 +46,27 @@ public class Ejemplo {
 
         // Agrega la tabla dentro de un JScrollPane al frame
         frame.add(new JScrollPane(table));
+
+        JButton boton = new JButton("Añadir");
+        boton.addActionListener(e -> {
+            JPanel panel = new JPanel();
+            panel.setLayout(new GridLayout(2, 2, 5, 5));
+            panel.add(new JLabel("Nombre: "));
+            JTextField tfNombre = new JTextField();
+            panel.add(tfNombre);
+            panel.add(new JLabel("Edad: "));
+            JTextField tfEdad = new JTextField();
+            panel.add(tfEdad);
+
+            int result = JOptionPane.showConfirmDialog(table, panel, "Añadir", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+            if (JOptionPane.OK_OPTION == result) {
+                model.addRow(new Object[] {tfNombre.getText(), Integer.parseInt(tfEdad.getText())});
+            } else if (JOptionPane.CANCEL_OPTION == result) {
+                // ...
+            }
+        });
+
+        frame.add(boton, BorderLayout.SOUTH);
 
         // Configura el tamaño y comportamiento de cierre del frame
         frame.setSize(400, 300);
