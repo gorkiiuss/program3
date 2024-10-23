@@ -10,7 +10,7 @@ public class TablaDeProductos extends JTable {
 
     public TablaDeProductos(List<Producto> productos) {
         // Configuración básica del JTable con un modelo de tabla
-        modeloTabla = new DefaultTableModel();
+        modeloTabla = new InventarioTableModel(productos);
 
         // Añadir columnas
         modeloTabla.addColumn("ID");

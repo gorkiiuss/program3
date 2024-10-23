@@ -1,9 +1,10 @@
 package com.github.gorkiiuss.program3.ejercicios.tablaproductos.esqueleto;
 
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 import java.util.List;
 
-public class InventarioTableModel extends AbstractTableModel {
+public class InventarioTableModel extends DefaultTableModel {
     private List<Producto> productos;
 
     // Constructor e implementación de métodos requeridos por AbstractTableModel

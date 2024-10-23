@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class VentanaPrincipal extends JFrame {
     private JTable tablaProductos;
@@ -15,7 +16,7 @@ public class VentanaPrincipal extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Inicializar componentes
-        tablaProductos = new JTable();  // El modelo de la tabla se configurará más adelante.
+        tablaProductos = new TablaDeProductos(new ArrayList<>());  // El modelo de la tabla se configurará más adelante.
         btnAgregar = new JButton("Agregar Producto");
         btnEditar = new JButton("Editar Producto");
         btnEliminar = new JButton("Eliminar Producto");
