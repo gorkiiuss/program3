@@ -14,6 +14,9 @@ public class InventarioTableModel extends DefaultTableModel {
 
     @Override
     public int getRowCount() {
+        if (productos == null)
+            return 0;
+
         // Devuelve la cantidad de productos
         return productos.size();
     }
