@@ -2,6 +2,8 @@ package com.github.gorkiiuss.program3.swing.keyevent.ejemplo;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+
+import java.awt.Frame;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -48,6 +50,8 @@ public class Ejemplo {
                     } catch (Exception ignore) {
 
                     }
+                }else if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+                	System.exit(0);
                 }
             }
         });

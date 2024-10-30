@@ -30,7 +30,8 @@ public class LoadingRouletteVM {
                         angle -= 360;
                     }
                     component.repaint();
-                    Thread.sleep(16); // Aproximadamente 60 fps
+                    Thread.sleep(16); 
+                    // Aproximadamente 60 fps
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
