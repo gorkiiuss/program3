@@ -33,7 +33,7 @@ public class VentanaPrincipal extends JFrame {
 		// Aquí se añadirán los listeners para manejar eventos de los botones.
 
 		btnAgregar.addActionListener(e -> {
-
+			
 			JPanel panel = new JPanel(new GridLayout(5, 2));
 
 			JLabel label1 = new JLabel("ID");

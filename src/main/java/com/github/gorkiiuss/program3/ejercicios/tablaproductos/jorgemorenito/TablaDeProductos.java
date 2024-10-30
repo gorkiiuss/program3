@@ -41,4 +41,6 @@ public class TablaDeProductos extends JTable {
     }
 
     // Métodos adicionales como agregar, editar o eliminar productos serán implementados por el alumno
+    
+    
 }
