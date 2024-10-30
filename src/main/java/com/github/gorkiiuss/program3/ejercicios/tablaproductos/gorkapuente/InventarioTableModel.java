@@ -1,6 +1,5 @@
-package com.github.gorkiiuss.program3.ejercicios.tablaproductos.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.tablaproductos.gorkapuente;
 
-import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 
@@ -39,6 +38,24 @@ public class InventarioTableModel extends DefaultTableModel {
             case 4: return producto.getCategoria();
             default: return null;
         }
+    }
+
+    public void agregarProducto(Producto producto) {
+        productos.add(producto);
+        fireTableRowsInserted(productos.size() - 1, productos.size() - 1);
+    }
+
+    public Producto getProducto(int indice) {
+        return this.productos.get(indice);
+    }
+
+    public void editarProducto(int indice) {
+        fireTableRowsUpdated(indice, indice);
+    }
+
+    public void eliminarProducto(int indice) {
+        this.productos.remove(indice);
+        fireTableRowsDeleted(indice, indice);
     }
 
     // Otros métodos, como setValueAt, agregar o eliminar productos serán implementados por el alumno.

@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.ejercicios.tablaproductos.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.tablaproductos.gorkapuente;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TablaDeProductos extends JTable {
 
-    private DefaultTableModel modeloTabla;
+    private InventarioTableModel modeloTabla;
 
     public TablaDeProductos(List<Producto> productos) {
         // Configuración básica del JTable con un modelo de tabla
@@ -38,6 +38,10 @@ public class TablaDeProductos extends JTable {
             };
             modeloTabla.addRow(fila);
         }
+    }
+
+    public InventarioTableModel getModeloTabla() {
+        return modeloTabla;
     }
 
     // Métodos adicionales como agregar, editar o eliminar productos serán implementados por el alumno
