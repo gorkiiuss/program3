@@ -1,0 +1,7 @@
+saludo: Zertan lagun zaitzaket gaur?
+opcion1: Kontsultatu gaur egungo klima
+opcion2: Aurreikuspena lortu
+opcion3: Irten
+clima_actual: Gaur egungo klima {ciudad}-en {descripcion} da, {temperatura}°C-ko tenperaturarekin.
+prevision: Datozen egunetarako {descripcion} espero da, {min}°C eta {max}°C arteko tenperaturekin.
+despedida: Eskerrik asko Klimaren aplikazioa erabiltzeagatik! Gero arte!

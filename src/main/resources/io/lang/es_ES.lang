@@ -1,0 +1,7 @@
+saludo: ¿En qué puedo ayudarte hoy?
+opcion1: Consultar el clima actual
+opcion2: Obtener la previsión
+opcion3: Salir
+clima_actual: El clima actual en {ciudad} es {descripcion} con una temperatura de {temperatura}°C.
+prevision: Para los próximos días, se espera {descripcion} con temperaturas entre {min}°C y {max}°C.
+despedida: ¡Gracias por usar la aplicación de Clima! ¡Hasta luego!
