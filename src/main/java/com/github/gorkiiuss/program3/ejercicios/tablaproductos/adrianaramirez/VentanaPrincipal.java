@@ -84,22 +84,22 @@ public class VentanaPrincipal extends JFrame {
         });
         
         
-        public JPanel getVentanaEmergente() {
-        	
-        	JPanel ventanaEmergente = new JPanel(new GridLayout(5, 2));
-        	
-        	ventanaEmergente.add(new JLabel("ID"));
-        	ventanaEmergente.add(new JTextField());
-        	ventanaEmergente.add(new JLabel("Nombre"));
-        	ventanaEmergente.add(new JTextField());
-        	ventanaEmergente.add(new JLabel("Cantidad"));
-        	ventanaEmergente.add(new JTextField());
-        	ventanaEmergente.add(new JLabel("Precio"));
-        	ventanaEmergente.add(new JTextField());
-        	ventanaEmergente.add(new JLabel("Categoria"));
-        	ventanaEmergente.add(new JTextField());
-        	
-        }
+//        public JPanel getVentanaEmergente() {
+//
+//        	JPanel ventanaEmergente = new JPanel(new GridLayout(5, 2));
+//
+//        	ventanaEmergente.add(new JLabel("ID"));
+//        	ventanaEmergente.add(new JTextField());
+//        	ventanaEmergente.add(new JLabel("Nombre"));
+//        	ventanaEmergente.add(new JTextField());
+//        	ventanaEmergente.add(new JLabel("Cantidad"));
+//        	ventanaEmergente.add(new JTextField());
+//        	ventanaEmergente.add(new JLabel("Precio"));
+//        	ventanaEmergente.add(new JTextField());
+//        	ventanaEmergente.add(new JLabel("Categoria"));
+//        	ventanaEmergente.add(new JTextField());
+//
+//        }
         
     }
 }

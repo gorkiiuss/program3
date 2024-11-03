@@ -2,9 +2,6 @@ package com.github.gorkiiuss.program3.ejercicios.tablaproductos.esqueleto;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-
-import com.github.gorkiiuss.program3.ejercicios.tablaproductos.jonaranjuelo.Producto;
-
 import java.util.List;
 
 public class TablaDeProductos extends JTable {

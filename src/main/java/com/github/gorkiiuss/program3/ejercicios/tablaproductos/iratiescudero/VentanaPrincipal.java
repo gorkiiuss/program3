@@ -64,9 +64,9 @@ public class VentanaPrincipal extends JFrame {
         	
         	int opcion= JOptionPane.showConfirmDialog(panelBotones,ventanaemerg);
         	
-        	if (opcion==JOptionPane.OK_OPTION) {
-        		new Producto (Integer.parseInt(idt.getSelectedText()), nombret, cantidadt, preciot, categoriat);
-        	}
+//        	if (opcion==JOptionPane.OK_OPTION) {
+//        		new Producto (Integer.parseInt(idt.getSelectedText()), nombret, cantidadt, preciot, categoriat);
+//        	}
         	
         	
         });

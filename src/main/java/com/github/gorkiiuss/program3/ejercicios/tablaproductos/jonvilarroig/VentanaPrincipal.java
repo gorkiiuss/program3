@@ -58,7 +58,7 @@ public class VentanaPrincipal extends JFrame {
 				
 				Producto p = new Producto(Integer.parseInt(Id.getText()), nombre.getText(), Integer.parseInt(cantidad.getText()), Double.parseDouble(precio.getText()), precio.getText());
 				System.out.println(p);
-				tablaProductos;
+				// tablaProductos;
 				}
 		});
        
