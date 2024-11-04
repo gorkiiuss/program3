@@ -18,7 +18,7 @@ public class DefaultAnimationLabelModel {
     public DefaultAnimationLabelModel(AnimationLabel view, String pathToFrames) {
         this.view = view;
 
-        URL url = com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.gorkapuentemejorado.DefaultAnimationLabelModel.class.getResource("/ejercicios/preparacionparcial/esqueletobailando");
+        URL url = DefaultAnimationLabelModel.class.getResource("/ejercicios/preparacionparcial/esqueletobailando");
         if (url == null) {
             frameImages = null;
             return;
