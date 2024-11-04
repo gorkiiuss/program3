@@ -2,16 +2,20 @@ package com.github.gorkiiuss.program3.ejercicios.tablaproductos.esqueleto;
 
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
+
 import java.util.List;
 
 public class InventarioTableModel extends DefaultTableModel {
     private List<Producto> productos;
 
     // Constructor e implementación de métodos requeridos por AbstractTableModel
-    public InventarioTableModel(List<Producto> productos) {
-        this.productos = productos;
+    public InventarioTableModel(List<Producto> productos2) {
+        this.productos = productos2;
     }
 
+    public void addProducto(Producto p) {
+    	productos.add(p);    }
+    
     @Override
     public int getRowCount() {
         if (productos == null)
@@ -40,6 +44,7 @@ public class InventarioTableModel extends DefaultTableModel {
             default: return null;
         }
     }
+
 
     // Otros métodos, como setValueAt, agregar o eliminar productos serán implementados por el alumno.
 }

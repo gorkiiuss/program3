@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TablaDeProductos extends JTable {
 
-    private DefaultTableModel modeloTabla;
+    private InventarioTableModel modeloTabla;
 
     public TablaDeProductos(List<Producto> productos) {
         // Configuración básica del JTable con un modelo de tabla
@@ -25,6 +25,10 @@ public class TablaDeProductos extends JTable {
         // Aquí se añadirá el código para poblar la tabla con los productos
         cargarProductos(productos);
     }
+    
+    public InventarioTableModel getInventario() {
+    	return modeloTabla;
+    }
 
     private void cargarProductos(List<Producto> productos) {
         // Se implementará la lógica para cargar los productos en la tabla
@@ -40,5 +44,16 @@ public class TablaDeProductos extends JTable {
         }
     }
 
+    public void cargarUnProducto(Producto p) {
+    	Object[] filaNueva = {
+    			 p.getId(),
+                 p.getNombre(),
+                 p.getCantidad(),
+                 p.getPrecio(),
+                 p.getCategoria()
+    	};
+    	modeloTabla.addRow(filaNueva);
+    	modeloTabla.addProducto(p);
+    }
     // Métodos adicionales como agregar, editar o eliminar productos serán implementados por el alumno
 }

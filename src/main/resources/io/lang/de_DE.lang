@@ -1,0 +1,7 @@
+saludo: Wie kann ich Ihnen heute helfen?
+opcion1: Aktuelles Wetter anzeigen
+opcion2: Vorhersage abrufen
+opcion3: Beenden
+clima_actual: Das aktuelle Wetter in {ciudad} ist {descripcion} bei einer Temperatur von {temperatura}°C.
+prevision: In den kommenden Tagen wird {descripcion} erwartet, mit Temperaturen zwischen {min}°C und {max}°C.
+despedida: Vielen Dank für die Nutzung der Wetter-App! Auf Wiedersehen!
