@@ -23,13 +23,12 @@ public class IOFicherosCSV {
 
             BufferedReader reader = new BufferedReader(new FileReader(pacientesArchivo));
 
-            Medico medico = new Medico();
             pacientes = reader.lines()
                     .map(line -> line.split(","))
                     .map(valoresEnLinea -> {
-                        for (int i = 0; i < valoresEnLinea.length; i++) {
-                            System.out.println(valoresEnLinea[i]);
-                        }
+//                        for (int i = 0; i < valoresEnLinea.length; i++) {
+//                            System.out.println(valoresEnLinea[i]);
+//                        }
                         int id = Integer.parseInt(valoresEnLinea[0]);
                         String nombre = valoresEnLinea[1];
                         int edad = Integer.parseInt(valoresEnLinea[2]);
