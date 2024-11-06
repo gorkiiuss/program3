@@ -17,26 +17,24 @@ public class NumberImageCellRenderer implements TableCellRenderer {
           debe mostrar la imagen correspondiente. En este caso las imagenes estan guardadas en
           "/ejercicios/preparacionparcial/iorenderers/" bajo el nombre "image_`value`.png".
         */
+    	JLabel label= new JLabel();
     	
-    	if (isSelected==true) {
+    	if (((NumberTableModel) table.getModel()).isShowing()==true && column==1) {
     		
     	
         URL url= NumberImageCellRenderer.class.getResource("/ejercicios/preparacionparcial/iorenderers"+"/image_" +value+".png");
 		
 		ImageIcon imagen= new ImageIcon(url);
-		JLabel label= new JLabel();
+
 		label.setIcon(imagen);
-		
-		
-	
-		return label;
 		
     }else {
     	
-    	boolean showing = ((NumberTableModel) table.getModel()).isShowing();
-    	JLabel label= new JLabel("No se muestran imagenes");
-    	return label;
+//    	boolean showing = ((NumberTableModel) table.getModel()).isShowing();
+    	label= new JLabel("No se muestran imagenes");
+    
     	
     }
+    	return label;
 }
 }

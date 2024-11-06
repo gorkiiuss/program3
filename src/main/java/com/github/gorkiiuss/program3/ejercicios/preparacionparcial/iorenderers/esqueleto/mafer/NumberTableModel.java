@@ -21,7 +21,7 @@ public class NumberTableModel extends DefaultTableModel {
     @Override
     public Object getValueAt(int row, int column) {
         // TODO: El valor que se guarda en la tabla debe ser siempre el numero de la fila
-        return row;
+        return row + column;
     }
 
     public void addRow() {

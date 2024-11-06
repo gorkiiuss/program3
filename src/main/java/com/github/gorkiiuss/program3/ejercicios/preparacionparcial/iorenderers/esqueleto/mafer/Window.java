@@ -2,6 +2,8 @@ package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.iorenderers.
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Window extends JFrame {
     public Window() {
@@ -26,7 +28,16 @@ public class Window extends JFrame {
 
         // Añadir boton de mostrar imagenes
         JToggleButton btnShow = new JToggleButton("Mostrar imagenes");
-        btnShow.addActionListener(e -> tableModel.setShowing(btnShow.isSelected()));
+        btnShow.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Alternar el estado de mostrar imágenes
+                tableModel.setShowing(!tableModel.isShowing());
+
+                // Refrescar la tabla para que se actualicen las celdas
+                numberTable.repaint();
+            }
+        });
 
         pnlBtns.add(btnShow);
 
