@@ -1,5 +1,7 @@
-package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.maferfigueroa;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.*;
@@ -24,9 +26,14 @@ public class Window extends JFrame {
             }
         });
         
-        setLayout(new GridLayout(2,1));
-        add(animationLabel);
-        add(btnAnimation);
+//        setLayout(new GridLayout(2,1));
+//        
+//        add(animationLabel);
+//        add(btnAnimation);
+//        
         
+        setLayout(new BorderLayout());
+        add(animationLabel,BorderLayout.CENTER);
+        add(btnAnimation, BorderLayout.SOUTH);
     }
 }

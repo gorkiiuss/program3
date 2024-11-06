@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.maferfigueroa;
 
 import javax.swing.*;
 import java.io.File;
@@ -13,6 +13,7 @@ public class DefaultAnimationLabelModel {
     private boolean playing;
     private int frame;
     private final Icon[] frameImages;
+    private Thread t;
     // TODO: añadir el thread aqui como variable y pararlo y continuarlo cuando queramos
 
     public DefaultAnimationLabelModel(AnimationLabel view, String pathToFrames) {
@@ -81,9 +82,6 @@ public class DefaultAnimationLabelModel {
         			if(frame==frameImages.length) {
         				frame=0;
         			}
-        			
-   
-        			
         		}else {
         		
         	}
