@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.ejercicios.parcial2023.esqueleto;
+package es.deusto.prog3.cap03.ejercicios.superheroes;
 import java.awt.GridLayout;
 import java.util.Arrays;
 import java.util.List;
@@ -69,6 +69,8 @@ public class VentanaPrincipal extends JFrame {
         this.tablaComics.getSelectionModel().addListSelectionListener(e -> {
             //Cuando se selecciona una fila, se actualiza la tabla de personajes
             this.loadPersonajes(this.comics.get((int)tablaComics.getValueAt(tablaComics.getSelectedRow(), 0)-1));
+            
+         this.tablaComics.getColumnModel().getColumn(1).setCellRenderer(new EditorialCellRender());
         });
 
         //Cabecera del modelo de datos

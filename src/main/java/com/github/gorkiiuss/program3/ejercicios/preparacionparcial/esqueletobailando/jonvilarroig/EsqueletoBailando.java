@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.jonvilarroig;
 
 public class EsqueletoBailando {
     public static void main(String[] args) {
