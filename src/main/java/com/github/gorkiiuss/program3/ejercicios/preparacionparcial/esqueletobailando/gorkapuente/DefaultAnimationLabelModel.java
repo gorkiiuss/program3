@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.esqueletobailando.gorkapuente;
 
 import javax.swing.*;
 import java.io.File;
@@ -13,7 +13,7 @@ public class DefaultAnimationLabelModel {
     private boolean playing;
     private int frame;
     private final Icon[] frameImages;
-    // TODO: añadir el thread aqui como variable y pararlo y continuarlo cuando queramos
+    private final Thread animationThread;
 
     public DefaultAnimationLabelModel(AnimationLabel view, String pathToFrames) {
         this.view = view;
@@ -21,6 +21,7 @@ public class DefaultAnimationLabelModel {
         URL url = DefaultAnimationLabelModel.class.getResource("/ejercicios/preparacionparcial/esqueletobailando");
         if (url == null) {
             frameImages = null;
+            animationThread = null;
             return;
         }
 
@@ -34,6 +35,7 @@ public class DefaultAnimationLabelModel {
         if (!framesDirectory.exists() || !framesDirectory.isDirectory()) {
             System.err.println("No se ha encontrado el directorio o no es un directorio: " + framesDirectory);
             frameImages = null;
+            animationThread = null;
             return;
         }
 
@@ -43,6 +45,7 @@ public class DefaultAnimationLabelModel {
         if (matchingFiles == null || matchingFiles.length == 0) {
             System.err.println("No se ha encontrado ningun fichero dentro que siga la estructura definida");
             frameImages = null;
+            animationThread = null;
             return;
         }
 
@@ -64,25 +67,27 @@ public class DefaultAnimationLabelModel {
             this.frameImages[i] = new ImageIcon(matchingFiles[i].getAbsolutePath());
         }
 
-        /*
-         TODO: Crear hilo e indicarle que es lo que tiene que ejecutar. Si isPLaying entonces el bucle del hilo no hara
-          nada. Sino, tendra que mostrar el siguiente frame de la animacion. Cuando el bucle no haga nada debe tener un
-          `sleep` para que la CPU no se sobrecargue.
-        */
-        new Thread(() -> {
+        this.animationThread = new Thread(() -> {
             while (true) {
-
-                if (playing) {
-
+                if (!playing) {
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    continue;
                 }
-
+                Icon icon = frameImages[frame];
+                view.setIcon(icon);
                 try {
-                    Thread.sleep(16);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
+                frame = (frame + 1) % frameImages.length;
             }
-        }).start();
+        });
+        animationThread.start();
     }
 
     public boolean isPlaying() {
@@ -93,3 +98,4 @@ public class DefaultAnimationLabelModel {
         playing = !playing;
     }
 }
+
