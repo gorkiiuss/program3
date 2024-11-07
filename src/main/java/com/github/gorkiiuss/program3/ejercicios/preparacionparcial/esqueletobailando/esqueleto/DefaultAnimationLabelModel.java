@@ -69,20 +69,6 @@ public class DefaultAnimationLabelModel {
           nada. Sino, tendra que mostrar el siguiente frame de la animacion. Cuando el bucle no haga nada debe tener un
           `sleep` para que la CPU no se sobrecargue.
         */
-        new Thread(() -> {
-            while (true) {
-
-                if (playing) {
-
-                }
-
-                try {
-                    Thread.sleep(16);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }).start();
     }
 
     public boolean isPlaying() {
