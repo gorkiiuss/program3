@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.iorenderers.esqueleto;
+package com.github.gorkiiuss.program3.ejercicios.preparacionparcial.iorenderers.gorkapuente;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -20,7 +20,6 @@ public class NumberTableModel extends DefaultTableModel {
 
     @Override
     public Object getValueAt(int row, int column) {
-        // TODO: El valor que se guarda en la tabla debe ser siempre el numero de la fila
         return row;
     }
 
@@ -35,10 +34,14 @@ public class NumberTableModel extends DefaultTableModel {
 
     public void setShowing(boolean showing) {
         this.showing = showing;
-        // TODO: ¿Qué hay que hacer cada vez que se actualiza una fila?
+        fireTableRowsUpdated(0, getRowCount() - 1);
     }
 
     public boolean isShowing() {
         return showing;
+    }
+
+    public int getMaxNumber() {
+        return this.maxNumber;
     }
 }
