@@ -71,12 +71,36 @@ public class VentanaPrincipal extends JFrame {
             this.loadPersonajes(this.comics.get((int)tablaComics.getValueAt(tablaComics.getSelectedRow(), 0)-1));
         });
 
+   //Renderizar las filas pares e impares con un color de fondo específico: RGB(250, 249, 249) y RGB(190, 227, 219) respectivamente    
+        for(int i=0; i<4; i++) {
+        	if(i ==1) {
+        		this.tablaComics.getColumnModel().getColumn(1).setCellRenderer(new EditorialCellRenderer());
+        	}else this.tablaComics.getColumnModel().getColumn(i).setCellRenderer(new AlternatingRowRenderer());
+        }
+        
+   //CAMBIAMOS LOS NOMBRE DC Y MARVEL POR EL LOGO EN LA TABLA COMICS:
+        //lo metemos en el for
+        //this.tablaComics.getColumnModel().getColumn(1).setCellRenderer(new EditorialCellRenderer());
+        
+   //CAMBIAMOS ALTURA DE TODAS LAS FILAS A 26 PIXELES:
+        this.tablaComics.setRowHeight(26);
+       
+        
+        
         //Cabecera del modelo de datos
         Vector<String> cabeceraPersonajes = new Vector<String>(Arrays.asList( "ID", "EDITORIAL", "NOMBRE", "EMAIL"));
         //Se crea el modelo de datos para la tabla de comics sólo con la cabecera
         this.modeloDatosPersonajes = new DefaultTableModel(new Vector<Vector<Object>>(), cabeceraPersonajes);
         //Se crea la tabla de personajes con el modelo de datos
         this.tablaPersonajes = new JTable(this.modeloDatosPersonajes);
+      
+   //CAMBIAMOS LOS NOMBRES POR EL LOGO EN LA TABLA PERSONAJES:     
+            
+        this.tablaPersonajes.getColumnModel().getColumn(1).setCellRenderer(new EditorialCellRenderer());
+        
+   //CAMBIAMOS ALTURA DE TODAS LAS FILAS A 26 PIXELES:
+        this.tablaPersonajes.setRowHeight(26);
+        
     }
 
     private void loadComics() {
@@ -101,4 +125,8 @@ public class VentanaPrincipal extends JFrame {
         this.scrollPanePersonajes.setBorder(new TitledBorder(String.format("Personajes del comic '%s' [%d]",
                 comic.getTitulo(), comic.getPersonajes().size())));
     }
+    
+    
+    
+    
 }
