@@ -1,0 +1,7 @@
+saludo: How can I assist you today?
+opcion1: Check current weather
+opcion2: Get forecast
+opcion3: Exit
+clima_actual: The current weather in {ciudad} is {descripcion} with a temperature of {temperatura}°C.
+prevision: For the upcoming days, it is expected to be {descripcion} with temperatures between {min}°C and {max}°C.
+despedida: Thank you for using the Weather App! Goodbye!
