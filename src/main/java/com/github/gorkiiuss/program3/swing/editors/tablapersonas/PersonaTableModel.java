@@ -1,11 +1,12 @@
 package com.github.gorkiiuss.program3.swing.editors.tablapersonas;
 
 import javax.swing.table.DefaultTableModel;
+import java.time.LocalDate;
 import java.util.List;
 
 public class PersonaTableModel extends DefaultTableModel {
 
-    private String[] columnNames = {"ID", "Nombre", "Apellido1", "Apellido2", "Edad", "Gafas"};
+    private String[] columnNames = {"ID", "Nombre", "Apellido1", "Apellido2", "Edad", "Gafas", "Fecha de inicio"};
     private List<Persona> data;
 
     public PersonaTableModel(List<Persona> data) {
@@ -40,6 +41,8 @@ public class PersonaTableModel extends DefaultTableModel {
                 return persona.getEdad();
             case 5:
                 return persona.isGafas();
+            case 6:
+                return persona.getFechaDeInicio();
             default:
                 return null;
         }
@@ -79,6 +82,9 @@ public class PersonaTableModel extends DefaultTableModel {
             case 5:
                 persona.setGafas((Boolean) value);
                 break;
+            case 6:
+                persona.setFechaDeInicio((LocalDate) value);
+                break;
         }
         fireTableCellUpdated(row, col);
     }
@@ -95,5 +101,10 @@ public class PersonaTableModel extends DefaultTableModel {
             default:
                 return String.class;
         }
+    }
+
+    public void add(Persona persona) {
+        this.data.add(persona);
+        fireTableRowsInserted(getRowCount() - 1, getRowCount() - 1);
     }
 }

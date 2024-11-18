@@ -1,5 +1,7 @@
 package com.github.gorkiiuss.program3.swing.editors.tablapersonas;
 
+import java.time.LocalDate;
+
 public class Persona {
     private int id;
     private String nombre;
@@ -7,19 +9,22 @@ public class Persona {
     private String apellido2;
     private int edad;
     private boolean gafas;
+    private LocalDate fechaDeInicio;
 
     // Constructor por defecto
-    public Persona() {
+    public Persona(int id) {
+        this.id = id;
     }
 
     // Constructor con parámetros
-    public Persona(int id, String nombre, String apellido1, String apellido2, int edad, boolean gafas) {
+    public Persona(int id, String nombre, String apellido1, String apellido2, int edad, boolean gafas, LocalDate fechaDeInicio) {
         this.id = id;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
         this.edad = edad;
         this.gafas = gafas;
+        this.fechaDeInicio = fechaDeInicio;
     }
 
     // Getters y Setters
@@ -70,5 +75,13 @@ public class Persona {
     public void setGafas(boolean gafas) {
         this.gafas = gafas;
         System.out.println("`gafas` para la persona nº" + id + " se ha actualizado. Ahora es: " + gafas);
+    }
+
+    public LocalDate getFechaDeInicio() {
+        return this.fechaDeInicio;
+    }
+
+    public void setFechaDeInicio(LocalDate fechaDeInicio) {
+        this.fechaDeInicio = fechaDeInicio;
     }
 }
