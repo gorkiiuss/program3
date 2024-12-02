@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.io.basededatos.datos.pelicula;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.pelicula;
 
 public class Pelicula {
     private final int id;

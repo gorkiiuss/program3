@@ -1,6 +1,6 @@
-package com.github.gorkiiuss.program3.io.basededatos.datos.sesion;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.sesion;
 
-import com.github.gorkiiuss.program3.io.basededatos.datos.pelicula.Pelicula;
+import com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.pelicula.Pelicula;
 
 import java.util.Date;
 

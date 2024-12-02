@@ -1,8 +1,6 @@
-package com.github.gorkiiuss.program3.io.basededatos.datos.pelicula;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.pelicula;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class GestorBDPeliculaTest {
     @Test

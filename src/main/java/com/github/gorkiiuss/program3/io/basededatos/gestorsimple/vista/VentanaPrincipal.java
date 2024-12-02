@@ -1,7 +1,7 @@
-package com.github.gorkiiuss.program3.io.basededatos.vista;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple.vista;
 
-import com.github.gorkiiuss.program3.io.basededatos.datos.pelicula.GestorBDPelicula;
-import com.github.gorkiiuss.program3.io.basededatos.datos.pelicula.Pelicula;
+import com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.pelicula.GestorBDPelicula;
+import com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.pelicula.Pelicula;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.io.basededatos.vista;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple.vista;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;

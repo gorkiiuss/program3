@@ -1,4 +1,4 @@
-package com.github.gorkiiuss.program3.io.basededatos.datos.sesion;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple.datos.sesion;
 
 public class GestorBDSesion {
     private static GestorBDSesion instance;

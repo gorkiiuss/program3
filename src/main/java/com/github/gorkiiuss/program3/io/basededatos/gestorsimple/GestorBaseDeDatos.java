@@ -1,6 +1,6 @@
-package com.github.gorkiiuss.program3.io.basededatos;
+package com.github.gorkiiuss.program3.io.basededatos.gestorsimple;
 
-import com.github.gorkiiuss.program3.io.basededatos.vista.VentanaPrincipal;
+import com.github.gorkiiuss.program3.io.basededatos.gestorsimple.vista.VentanaPrincipal;
 
 public class GestorBaseDeDatos {
     public static void main(String[] args) {
